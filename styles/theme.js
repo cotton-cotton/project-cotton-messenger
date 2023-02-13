@@ -8,7 +8,6 @@ const device = {
 const theme = {
   white: '#fff',
   black: '#222',
-  navBlack: '#282828',
   mainBlue: '#8092f7',
   deepGray: '#494949',
   middleGray: '#7f7b7b',
