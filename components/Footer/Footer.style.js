@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const FooterWrapper = styled.footer`
 display: flex;
 flex-direction: column;
-border-top: 1.5px solid ${({ theme }) => theme.lightGray};
+border-top: 1.5px solid ${({ theme }) => theme.gray};
 `;
 export const TopContainer = styled.section`
 display: flex;
@@ -23,7 +23,7 @@ font-weight: ${({ theme }) => theme.bold};
 export const Content = styled.p`
 font-size: ${({ theme }) => theme.medium};
 font-weight: ${({ theme }) => theme.normal};
-color: ${({ theme }) => theme.lightGray};
+color: ${({ theme }) => theme.gray};
 `;
 export const BottomContainer = styled.section`
 display: flex;
@@ -31,7 +31,7 @@ flex-direction: column;
 justify-content: space-between;
 height: 100px;
 padding: 25px 150px;
-border-top: 1.5px solid ${({ theme }) => theme.lightGray};
+border-top: 1.5px solid ${({ theme }) => theme.middleGray};
 `;
 export const Row = styled.div`
 display: flex;
@@ -39,6 +39,6 @@ justify-content: space-between;
 width: 500px;
 `;
 export const Info = styled.p`
-color: ${({ theme }) => theme.lightGray};
+color: ${({ theme }) => theme.gray};
 font-size: ${({ theme }) => theme.medium};
 `;

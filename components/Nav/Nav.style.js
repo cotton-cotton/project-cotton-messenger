@@ -8,7 +8,7 @@ align-items:center;
 width: 100%;
 height: 80px;
 padding: 0 80px;
-border-bottom: 1px solid black;
+border-bottom: 1.5px solid ${({ theme }) => theme.middleGray};
 `;
 export const LogoContainer = styled.section``;
 export const Logo = styled.img`

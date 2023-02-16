@@ -5,13 +5,14 @@ const InputContainer = ({
   id,
   type,
   name,
+  title,
   placeholder,
   onChange,
-  // message,
-  // nameVal,
-  // emailVal,
-  // passwordVal,
-  // confirmVal,
+  message,
+  nameVal,
+  emailVal,
+  passwordVal,
+  confirmPasswordVal,
 }) => {
   const [focus, setFocus] = useState('');
   const [letterMessage, setLetterMessage] = useState(false);
@@ -22,7 +23,9 @@ const InputContainer = ({
 
   return (
     <S.InputWrapper>
-      <S.InputContainer
+      <S.InputContainer>
+      <S.InputTitle>{title}</S.InputTitle>
+      <S.InputBox
         id={id}
         name={name}
         type={type}
@@ -38,18 +41,19 @@ const InputContainer = ({
         }}
         focus={focus}
       />
-      {/* {!nameVal && letterMessage ? (
-        <S.InputMsg>{message.name}</S.InputMsg>
+      </S.InputContainer>
+      {!nameVal && letterMessage ? (
+        <S.ValidationMsg>{message.name}</S.ValidationMsg>
       ) : null}
       {!emailVal && letterMessage ? (
-        <S.InputMsg>{message.email}</S.InputMsg>
+        <S.ValidationMsg>{message.email}</S.ValidationMsg>
       ) : null}
       {!passwordVal && letterMessage ? (
-        <S.InputMsg>{message.password}</S.InputMsg>
+        <S.ValidationMsg>{message.password}</S.ValidationMsg>
       ) : null}
-      {!confirmVal && letterMessage ? (
-        <S.InputMsg>{message.confirm}</S.InputMsg>
-      ) : null} */}
+      {!confirmPasswordVal && letterMessage ? (
+        <S.ValidationMsg>{message.confirm}</S.ValidationMsg>
+      ) : null}
     </S.InputWrapper>
   );
 };

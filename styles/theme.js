@@ -8,10 +8,11 @@ const device = {
 const theme = {
   white: '#fff',
   black: '#222',
-  mainBlue: '#8092f7',
+  mainBlue: '#aeb9f2',
   deepGray: '#494949',
   middleGray: '#7f7b7b',
-  lightGray: '#babab8',
+  gray: '#babab8',
+  lightGray: '#d3d3d3',
 
   // mainBottomLine: '10px solid #7f7b7b',
   // listBottomLine: '1px solid #7f7b7b',
