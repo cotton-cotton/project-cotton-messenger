@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import * as S from './SignUp.style';
 import InputBox from '../../components/InputContainer/InputContainer';
 import { SignUpData } from '../SignUp/SignUpData';
+import Link from "next/Link";
+
 
 const SignUp = () => {
   const [inputValue, setInputValue] = useState({
@@ -128,6 +130,7 @@ console.log(checkboxActive);
         </S.CheckboxContainer>
       </S.SingUpInfo>
       <S.ButtonContainer>
+        <Link href='/SignIn/SignIn'>
         <S.Submit
         type='button'
         disabled={isValidForm ? false : true}
@@ -135,6 +138,7 @@ console.log(checkboxActive);
         >
           확인
         </S.Submit>
+        </Link>
         <S.Cancel
         type="button"
         >

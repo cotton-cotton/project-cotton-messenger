@@ -13,7 +13,7 @@ font-weight: 500;
 export const InputBox = styled.input`
 width: 100%;
 height: 35px;
-margin-bottom: 20px;
+margin-bottom: 30px;
 border: none;
 outline: none;
 border-bottom: ${({ id, focus }) =>
