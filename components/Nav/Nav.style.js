@@ -27,14 +27,14 @@ outline:none;
 background: none;
 border: none;
 border-right: 2px solid ${({ theme }) => theme.middleGray};
+cursor: pointer;
 `;
-export const Info = styled.button`
-display: flex;
-align-items: center;
-justify-content: center;
-width: 75px;
+export const SignIn = styled.button`
+width: 100px;
 height: 100%;
+font-size: ${({ theme }) => theme.xLarge};
 outline:none;
 background: none;
 border: none;
+cursor: pointer;
 `;

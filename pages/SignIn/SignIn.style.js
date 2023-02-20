@@ -33,6 +33,7 @@ color: ${({ theme }) => theme.black};
 background-color: ${({ isValidForm }) => isValidForm ? '#aeb9f2' : '#babab8'};
 border: 1px solid ${({ theme }) => theme.middleGray};
 border-radius: 4px;
+cursor: pointer;
 `;
 export const Cancel = styled.button`
 width: 80px;
@@ -40,4 +41,5 @@ height: 35px;
 background-color: ${({ theme }) => theme.lightGray};
 border: 1px solid ${({ theme }) => theme.middleGray};
 border-radius: 4px;
+cursor: pointer;
 `;

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import * as S from './SignUp.style';
 import InputBox from '../../components/InputContainer/InputContainer';
-import { SignUpData } from '../SignUp/SignUpData';
+import { SignUpData } from './SignUpData';
 import Link from "next/Link";
 
 
@@ -84,9 +84,6 @@ const SignUp = () => {
   passwordReg.test(userPassword) &&
   confirmPasswordVal &&
   checkboxActive;
-console.log(confirmPasswordVal);
-console.log(isValidForm);
-console.log(checkboxActive);
 
   return (
   <S.SignUpWrapper>
