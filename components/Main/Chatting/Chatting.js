@@ -1,6 +1,6 @@
 import React from 'react';
-import * as S from '../Chatting/Chatting.style';
-import ChattingSlider from '../ChattingSlider/ChattingSlider';
+import * as S from './Chatting.style';
+import ChattingSlider from './ChattingSlider/ChattingSlider';
 import Slide from 'react-reveal/Slide';
 
 const Chatting = () => {

@@ -2,10 +2,11 @@ import React, { useState } from 'react';
 import * as S from './SignUp.style';
 import InputBox from '../../components/InputContainer/InputContainer';
 import { SignUpData } from './SignUpData';
-import Link from "next/Link";
-
 
 const SignUp = () => {
+  const dispatch = useDispatch();
+  const profileList = useSelector(state => state.profile.profileList);
+
   const [inputValue, setInputValue] = useState({
     userName: '',
     userEmail: '',
@@ -28,7 +29,7 @@ const SignUp = () => {
       [name]: value,
     });
   };
-
+console.log(profileList);
   const isValidLetter =
   userName.length >= 1 &&
   userEmail.length >= 1 &&

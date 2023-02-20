@@ -20,6 +20,32 @@ margin-bottom: 70px;
 font-size: ${({ theme }) => theme.huge};
 font-weight: ${({ theme }) => theme.bold};
 `;
+export const ImageWrapper = styled.form`
+`;
+export const ImageContainer = styled.label`
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+align-items: center;
+width: 250px;
+height: 130px;
+margin-bottom: 20px;
+`;
+export const UserImg = styled.img`
+width: 100px;
+height: 100px;
+border-radius: 50px;
+cursor: pointer;
+`;
+export const ImageUpload = styled.input`
+display: none;
+`;
+export const SelectFile = styled.p`
+color: ${({ theme }) => theme.black};
+font-size: 16px;
+font-weight: 500;
+cursor: pointer;
+`;
 export const ButtonContainer = styled.div`
 display: flex;
 justify-content: space-between;

@@ -1,8 +1,5 @@
 import React from 'react';
 import * as S from '../Main/Main.style';
-import Info from '../../components/Info/Info';
-import Chatting from '../../components/Chatting/Chatting';
-import ServiceStart from '../../components/Main/ServiceStart/ServiceStart';
 import Fade from 'react-reveal/Fade';
 import Jump from 'react-reveal/Jump';
 
@@ -20,9 +17,6 @@ const Main = () => {
       </S.ContentImgContainer>
       </S.IntroContainer>
     </S.Intro>
-    {/* <Info />
-    <Chatting />
-    <ServiceStart /> */}
   </S.MainWrapper>
   );
 };

@@ -59,3 +59,6 @@ border: 1px solid ${({ theme }) => theme.middleGray};
 border-radius: 4px;
 cursor: pointer;
 `;
+export const Test = styled.img`
+width: 100px;
+`;

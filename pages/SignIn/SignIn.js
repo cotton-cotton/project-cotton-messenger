@@ -1,10 +1,17 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import * as S from '../SignIn/SignIn.style';
 import InputBox from '../../components/InputContainer/InputContainer';
+import { useRouter } from 'next/router';
 import { SignInData } from './SignInData';
-import Link from "next/Link";
+import { useDispatch, useSelector } from 'react-redux';
+import { profileActions } from '../../App/profileSlice';
 
 const SignIn = () => {
+  const router = useRouter();
+  const imgRef = useRef();
+  const dispatch = useDispatch();
+  const profileList = useSelector(state => state.profile.profileList);
+
   const [inputValue, setInputValue] = useState({
     userName: '',
     userEmail: '',
@@ -14,6 +21,8 @@ const SignIn = () => {
   const [nameVal, setNameVal] = useState(false);
   const [emailVal, setEmailVal] = useState(false);
   const [passwordVal, setPasswordVal] = useState(false);
+
+  const [userImg, setUserImg] = useState('');
 
   const { userName, userEmail, userPassword } = inputValue;
 
@@ -67,9 +76,31 @@ const SignIn = () => {
   const isValidForm =
   isValidLetter &&
   emailReg.test(userEmail) &&
-  passwordReg.test(userPassword);
+  passwordReg.test(userPassword) &&
+  userImg;
 
+  const uploadUserImg = () => {
+    const file = imgRef.current.files[0];
+    const reader = new FileReader();
+    reader.readAsDataURL(file);
+    reader.onloadend = () => {
+      setUserImg(reader.result);
+    };
+  };
+  const handleSubmit = event => {
+    event.preventDefault();
+  };
 
+  const user = {
+    id: 1,
+    userName: userName,
+    userImg: userImg,
+  };
+
+  const submitUserProfile = () => {
+    dispatch(profileActions.addProfile({ data: user }));
+  };
+console.log(profileList);
   return (
   <S.SignInWrapper>
     <S.SignInContainer>
@@ -99,16 +130,33 @@ const SignIn = () => {
           )
         })}
       </S.SignInInfo>
+
+      <S.ImageWrapper onSubmit={handleSubmit}>
+          <S.ImageContainer htmlFor='profileImg'>
+            <S.UserImg
+            src={userImg ? userImg : '/images/Profile/no-image.png'}
+            alt='user-img'
+            />
+             <S.ImageUpload
+        type='file'
+        accept='image/*'
+        id='profileImg'
+        onChange={uploadUserImg}
+        ref={imgRef}
+        />
+                 <S.SelectFile>프로필 이미지 선택</S.SelectFile>
+          </S.ImageContainer>
+        </S.ImageWrapper>
+
       <S.ButtonContainer>
-        <Link href='/Main/Main'>
         <S.Submit
         type='button'
         disabled={isValidForm ? false : true}
         isValidForm={isValidForm}
+        onClick={submitUserProfile}
         >
           확인
         </S.Submit>
-        </Link>
       <S.Cancel
       type='button'
       >
