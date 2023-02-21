@@ -153,7 +153,10 @@ console.log(profileList);
         type='button'
         disabled={isValidForm ? false : true}
         isValidForm={isValidForm}
-        onClick={submitUserProfile}
+        onClick={() => {
+          submitUserProfile();
+          router.push('/CheckingProfile/CheckingProfile');
+         }}
         >
           확인
         </S.Submit>

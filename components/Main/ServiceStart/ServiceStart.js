@@ -11,7 +11,6 @@ return (
   <S.LogoContainer>
   <S.Logo src='/images/Logo/cotton-logo.png' alt='logo' />
   </S.LogoContainer>
-  {/* <S.ServiceTitle>서비스 바로가기</S.ServiceTitle> */}
   <S.ServiceContent>
     {'우리라는 이름의 \n 모든 소통의 시작, 코튼톡'}
   </S.ServiceContent>

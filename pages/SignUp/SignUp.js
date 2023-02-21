@@ -4,9 +4,6 @@ import InputBox from '../../components/InputContainer/InputContainer';
 import { SignUpData } from './SignUpData';
 
 const SignUp = () => {
-  const dispatch = useDispatch();
-  const profileList = useSelector(state => state.profile.profileList);
-
   const [inputValue, setInputValue] = useState({
     userName: '',
     userEmail: '',
@@ -29,7 +26,7 @@ const SignUp = () => {
       [name]: value,
     });
   };
-console.log(profileList);
+
   const isValidLetter =
   userName.length >= 1 &&
   userEmail.length >= 1 &&
@@ -128,15 +125,14 @@ console.log(profileList);
         </S.CheckboxContainer>
       </S.SingUpInfo>
       <S.ButtonContainer>
-        <Link href='/SignIn/SignIn'>
         <S.Submit
         type='button'
         disabled={isValidForm ? false : true}
         isValidForm={isValidForm}
+        onClick={() => router.push('/SignIn/SignIn')}
         >
           확인
         </S.Submit>
-        </Link>
         <S.Cancel
         type="button"
         >
